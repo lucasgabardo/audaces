@@ -9,6 +9,8 @@ import { MaterialModule } from './material-module';
 import { LogoComponent } from './menu/logo/logo.component';
 import { ContentComponent } from './content/content.component';
 import { BannerComponent } from './content/banner/banner.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SequenceTargetComponent } from './content/sequence-target/sequence-target.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,17 @@ import { BannerComponent } from './content/banner/banner.component';
     LogoComponent,
     ContentComponent,
     BannerComponent,
+    SequenceTargetComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

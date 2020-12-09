@@ -10,11 +10,16 @@ export class BannerComponent {
   @Input() subtitle: string;
   @Input() imageSrc: string;
   @Input() type: string;
+  favorited = false;
 
   constructor() {
     this.title = "";
     this.subtitle = "";
     this.imageSrc = "";
-    this.type = "horizontal"
+    this.type = "horizontal";
+  }
+
+  toggleFavorite(){
+    this.favorited = !this.favorited;
   }
 }

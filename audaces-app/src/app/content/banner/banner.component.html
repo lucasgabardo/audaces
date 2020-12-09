@@ -4,5 +4,9 @@
     <div class="banner__text">
         <div class="banner__title">{{title}}</div>
         <div class="banner__subtitle">{{subtitle}}</div>
-    </div>     
+    </div>
+
+    <button class="banner__favorite-btn" mat-mini-fab aria-label="Favoritar" [color]="favorited ? 'accent' : 'white'" (click)="toggleFavorite()">
+        <mat-icon [color]="favorited ? 'white' : 'accent'">favorite_border</mat-icon>
+    </button>
 </div>

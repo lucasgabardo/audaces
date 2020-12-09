@@ -1,0 +1,60 @@
+<mat-card class="card">
+    <div class="audaces-h1">
+        Teste Audaces
+    </div>
+
+    <div class="line" fxLayout="row" fxLayoutGap="25px">
+        <div class="line__title">
+            Sequência
+        </div>
+
+        <div fxLayout="row wrap" fxLayoutGap="25px"  fxLayoutAlign="flex-start">  
+            <div fxFlex="calc(100% - 32px)" >
+                <div fxLayout="row wrap" fxLayoutGap="25px">        
+                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Primeiro número</mat-label>
+                            <input matInput type="text" [(ngModel)]="value">                
+                    </mat-form-field>
+                    </div>
+
+                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Segundo número</mat-label>
+                            <input matInput type="text" [(ngModel)]="value">                
+                        </mat-form-field>
+                    </div>
+
+                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Terceiro número</mat-label>
+                            <input matInput type="text" [(ngModel)]="value">                
+                        </mat-form-field>
+                    </div>
+
+                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Quarto número</mat-label>
+                            <input matInput type="text" [(ngModel)]="value">                
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutGap="25px">        
+                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Primeiro número</mat-label>
+                            <input matInput type="text" [(ngModel)]="value">                
+                        </mat-form-field>
+                    </div>
+ 
+                    
+                </div>
+            </div>
+        </div> 
+        
+        <button class="banner__favorite-btn" mat-fab aria-label="Favoritar" color="grey" (click)="toggleFavorite()">
+            <mat-icon color="#EAEAEA"> add</mat-icon>
+        </button>
+    </div>
+</mat-card>

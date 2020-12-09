@@ -1,16 +1,23 @@
 <div class="content">
-    <mat-grid-list cols="24" gutterSize="30" rowHeight="40">
-        <mat-grid-tile  colspan="18" rowspan="4" style="background-color: red">
-            <mat-card>Simple card</mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="6" rowspan="12">
+    <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="flex-start">
+        <div fxFlex="calc(75% - 32px)">
+           <div fxLayout="row"> 
+                <div fxFlex="calc(100% - 32px)">
+                    <app-sequence-target></app-sequence-target>
+                </div>
+           </div>
+           <div fxLayout="row" fxLayoutGap="20px"> 
+                <div fxFlex="calc(50% - 32px)">
+                    <app-banner title="Entre em contato" type="horizontal-bottom" imageSrc="assets/banner--contato.png"></app-banner>
+                </div>
+                <div fxFlex="calc(50% - 32px)">
+                    <app-banner title="Redes sociais" type="horizontal-top" imageSrc="assets/banner--redes-sociais.png"></app-banner>
+                </div>
+            </div> 
+        </div>
+        <div fxFlex="calc(25% - 32px)">
             <app-banner title="Texto aqui" subtitle="Exemplo" type="vertical" imageSrc="assets/banner--vertical.png"></app-banner>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="9" rowspan="4">
-            <app-banner title="Entre em contato" type="horizontal-bottom" imageSrc="assets/banner--contato.png"></app-banner>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="9" rowspan="4">
-            <app-banner title="Redes sociais" type="horizontal-top" imageSrc="assets/banner--redes-sociais.png"></app-banner>
-        </mat-grid-tile>
-      </mat-grid-list>
+        </div>
+       
+    </div>
 </div>
