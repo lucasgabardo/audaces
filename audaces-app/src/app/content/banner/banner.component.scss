@@ -1,0 +1,63 @@
+:host {
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.banner {
+  color: #fff;
+  position: relative;
+
+  &__title {
+    font-size: 41px;
+    letter-spacing: 3.48px;
+    text-transform: uppercase;
+    line-height: 44px;
+    font-weight: 500;
+  }
+
+  &__text {
+    position: absolute;
+  }
+
+  &__subtitle {
+    margin: 5px 0 0 0;
+    font-size: 21px;
+    letter-spacing: 1.87px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.vertical {
+  text-align: center;
+
+  .banner__text {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.horizontal-bottom {
+  text-align: left;
+
+  .banner__text {
+    left: 20px;
+    bottom: 20px;
+    width: 70%;
+    max-width: 200px;
+  }
+}
+
+.horizontal-top {
+  text-align: left;
+
+  .banner__text {
+    left: 20px;
+    bottom: 20px;
+    width: 70%;
+    max-width: 200px;
+  }
+}
