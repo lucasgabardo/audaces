@@ -1,7 +1,10 @@
-# Audaces Test.
+# Audaces Test
 Audaces Sequence/Target challenge.
 
 ![Audaces](audaces-readme-print.png)
+
+Deployed at: http://audaces-app.surge.sh
+
 <h2 align="center">Install and Run</h2>
 
 Clone the repo:
@@ -9,13 +12,13 @@ Clone the repo:
 $ git clone https://github.com/lucasgabardo/audaces.git
 ```
 
-Install Angular App dependencies and run:
+Install the Angular app dependencies and run:
 
 audaces-app/
 
 ```bash
 $ cd audaces-app
 $ npm install
-$ npm start
+$ ng serve
 ```
 
