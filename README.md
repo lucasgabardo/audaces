@@ -16,7 +16,7 @@ Install the Angular app dependencies and run:
 
 
 ```bash
-$ cd audaces
+$ cd audaces-app
 $ npm install
 $ ng serve
 ```
