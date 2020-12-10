@@ -9,6 +9,7 @@ import { ThemeService } from './core/services/theme.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'audaces-app';
   isDarkTheme: Observable<boolean>;
 
   constructor(private themeService: ThemeService) {

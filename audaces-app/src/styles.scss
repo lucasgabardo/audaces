@@ -27,7 +27,7 @@ $audaces-pink-dark: (
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $audaces-app-primary: mat-palette($audaces-pink, A100);
-$audaces-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$audaces-app-accent: mat-palette($audaces-pink, A100, A100, A100  );
 
 // The warn palette is optional (defaults to red).
 $audaces-app-warn: mat-palette($mat-red);
@@ -61,6 +61,12 @@ $audaces-app-theme: mat-light-theme(
     }
   }
 
+  .accent {
+    &--fill {
+      fill: #fff;
+    }
+  }
+
   .background {
     background-color: #2f2f2f;
 
@@ -77,6 +83,10 @@ $audaces-app-theme: mat-light-theme(
     background: #2f2f2f !important;
   }
 
+  .mat-flat-button span {
+    color: #292929;
+  }
+
   @include angular-material-theme($dark-theme);
 }
 
@@ -87,6 +97,12 @@ $audaces-app-theme: mat-light-theme(
   .primary {
     &--fill {
       fill: mat-color($primary);
+    }
+  }
+
+  .accent {
+    &--fill {
+      fill: #fff;
     }
   }
 
@@ -116,6 +132,7 @@ body {
   height: 100%;
 }
 body {
+  @extend .background--contrast;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 

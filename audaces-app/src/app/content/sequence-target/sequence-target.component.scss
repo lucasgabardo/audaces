@@ -4,18 +4,25 @@
   padding: 22px;
   margin: 0 0 20px 0;
 
+  &__title {
+    margin-bottom: 25px;
+  }
+
   &__actions {
     text-align: right;
+  }
+
+  &__no-combinations {
+    margin: 20px 0 0;
+    text-align: center;
   }
 }
 
 .line {
-  margin-top: 29px;
-
   &__title {
     font-size: 16px;
     margin: 15px 0 0 0;
-    width: 75px;
+    min-width: 120px;
   }
 
   &__item {
@@ -24,9 +31,29 @@
 
   .mat-form-field {
     max-width: 100%;
+    width: 100%;
+
+    @media (min-width: 960px) {
+      width: 200px;
+    }
   }
 
   &__target {
-    width: calc(100% - 170px);
+    width: calc(100% - 75px);
+
+    @media (min-width: 960px) {
+      width: calc(100% - 170px);
+    }
+  }
+
+  &__combinations {
+    width: 100%;
+  }
+
+  &__combination-field {
+    border-radius: 4px 4px 0 0;
+    padding: 21px 5px 10px 5px;
+    margin-bottom: 25px;
+    text-align: center;
   }
 }

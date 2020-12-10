@@ -6,7 +6,7 @@
         <div class="banner__subtitle">{{subtitle}}</div>
     </div>
 
-    <button class="banner__favorite-btn" mat-mini-fab aria-label="Favoritar" [color]="favorited ? 'accent' : 'white'" (click)="toggleFavorite()">
+    <button mat-mini-fab class="banner__favorite-btn" aria-label="Favoritar" [color]="favorited ? 'accent' : '#fff'" (click)="toggleFavorite()">
         <mat-icon [color]="favorited ? 'white' : 'accent'">favorite_border</mat-icon>
     </button>
 </div>

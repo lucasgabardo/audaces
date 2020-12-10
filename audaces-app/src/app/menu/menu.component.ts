@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class MenuComponent implements OnInit {
   isDarkTheme: Observable<boolean>;
   toggleTheme = false;
+  menuOpened = false;
 
   constructor(private themeService: ThemeService) { 
     this.isDarkTheme = new Observable()
@@ -24,4 +25,7 @@ export class MenuComponent implements OnInit {
     this.toggleTheme = !this.toggleTheme;
   }
 
+  toggleMenu(){
+    this.menuOpened = !this.menuOpened;
+  }
 }

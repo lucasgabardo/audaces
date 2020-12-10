@@ -1,6 +1,18 @@
+:host {
+  width: 100%;
+}
+
 .content {
   width: 100%;
-  padding: 44px 20px 20px 20px;
-  height: 100vh;
-  overflow-y: scroll;
+  padding: 70px 20px 20px 20px;
+
+  @media (min-width: 600px) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: 960px) {
+    padding-top: 44px;
+    overflow-y: auto;
+    height: 100vh;
+  }
 }

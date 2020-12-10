@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { SequenceTargetComponent } from './sequence-target.component';
 
@@ -8,7 +10,9 @@ describe('SequenceTargetComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SequenceTargetComponent ]
+      imports: [FormsModule],
+      declarations: [ SequenceTargetComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   });

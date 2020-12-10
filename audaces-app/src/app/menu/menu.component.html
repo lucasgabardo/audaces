@@ -1,11 +1,17 @@
-<div class="menu background" >
-    <app-logo class="menu__logo" color="primary"></app-logo>
-    <div class="menu__title audaces-h1">
-        Roboto-Medium 20px
-    </div>
-    <div class="menu__subtitle audaces-h2">
-        Roboto-Regular 14px
-    </div>
+<div class="menu background" [ngClass]="menuOpened ? 'opened': ''">
+    <button class="menu__close-btn" mat-mini-fab aria-label="Fechar menu" (click)="toggleMenu()" fxHide.md fxHide.lg color="white">
+        <mat-icon color="primary">close</mat-icon>
+    </button>
+
+    <div fxHide.xs fxHide.sm>
+        <app-logo class="menu__logo" color="primary"></app-logo>
+        <div class="menu__title audaces-h1">
+            Roboto-Medium 20px
+        </div>
+        <div class="menu__subtitle audaces-h2">
+            Roboto-Regular 14px
+        </div>
+    </div>    
 
     <nav class="menu__list--top">
         <button class="menu__list__item" mat-button color="primary">
@@ -29,5 +35,14 @@
         <button class="menu__list__item" mat-button>
             <mat-icon class="menu__icon">person</mat-icon>Username
         </button>
-    </nav> 
+    </nav>
+</div>
+
+<div class="menu__toolbar" fxHide.md fxHide.lg>  
+    <mat-toolbar color="primary">
+        <button (click)="toggleMenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <app-logo class="menu__logo" [accent]="true"></app-logo>
+    </mat-toolbar>
 </div>

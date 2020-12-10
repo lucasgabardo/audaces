@@ -6,8 +6,8 @@
                     <app-sequence-target></app-sequence-target>
                 </div>
            </div>
-           <div fxLayout="row" fxLayoutGap="20px"> 
-                <div fxFlex="calc(50% - 32px)">
+           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px"> 
+                <div fxFlex="calc(50% - 32px)" fxFlex="calc(50% - 32px)">
                     <app-banner title="Entre em contato" type="horizontal-bottom" imageSrc="assets/banner--contato.png"></app-banner>
                 </div>
                 <div fxFlex="calc(50% - 32px)">
@@ -15,9 +15,9 @@
                 </div>
             </div> 
         </div>
-        <div fxFlex="calc(25% - 32px)">
+
+        <div fxFlex="calc(25% - 32px)" fxHide.sm fxHide.md fxHide.xs>
             <app-banner title="Texto aqui" subtitle="Exemplo" type="vertical" imageSrc="assets/banner--vertical.png"></app-banner>
-        </div>
-       
+        </div>     
     </div>
 </div>

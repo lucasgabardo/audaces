@@ -6,18 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
-  @Input() title: string;
-  @Input() subtitle: string;
-  @Input() imageSrc: string;
-  @Input() type: string;
+  @Input() title: string = "";
+  @Input() subtitle: string = "";
+  @Input() imageSrc: string = "";
+  @Input() type: string = "";
   favorited = false;
-
-  constructor() {
-    this.title = "";
-    this.subtitle = "";
-    this.imageSrc = "";
-    this.type = "horizontal";
-  }
 
   toggleFavorite(){
     this.favorited = !this.favorited;
