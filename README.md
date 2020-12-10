@@ -14,10 +14,9 @@ $ git clone https://github.com/lucasgabardo/audaces.git
 
 Install the Angular app dependencies and run:
 
-audaces-app/
 
 ```bash
-$ cd audaces-app
+$ cd audaces
 $ npm install
 $ ng serve
 ```
