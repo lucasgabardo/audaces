@@ -1,7 +1,7 @@
 # Audaces Test.
 Audaces Sequence/Target challenge.
 
-![Audaces](audaces-readme-print)
+![Audaces](audaces-readme-print.png)
 <h2 align="center">Install and Run</h2>
 
 Clone the repo:
