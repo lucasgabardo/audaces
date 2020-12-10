@@ -14,47 +14,90 @@
                     <div class="line__item" fxFlex="calc(25% - 25px)">
                         <mat-form-field appearance="fill">
                             <mat-label>Primeiro número</mat-label>
-                            <input matInput type="text" [(ngModel)]="value">                
-                    </mat-form-field>
+                            <input matInput type="text" [(ngModel)]="sequence[0]" type="number">                
+                        </mat-form-field>
                     </div>
 
                     <div class="line__item" fxFlex="calc(25% - 25px)">
                         <mat-form-field appearance="fill">
                             <mat-label>Segundo número</mat-label>
-                            <input matInput type="text" [(ngModel)]="value">                
+                            <input matInput type="text" [(ngModel)]="sequence[1]" type="number">                
                         </mat-form-field>
                     </div>
 
                     <div class="line__item" fxFlex="calc(25% - 25px)">
                         <mat-form-field appearance="fill">
                             <mat-label>Terceiro número</mat-label>
-                            <input matInput type="text" [(ngModel)]="value">                
+                            <input matInput type="text" [(ngModel)]="sequence[2]" type="number">                
                         </mat-form-field>
                     </div>
 
                     <div class="line__item" fxFlex="calc(25% - 25px)">
                         <mat-form-field appearance="fill">
                             <mat-label>Quarto número</mat-label>
-                            <input matInput type="text" [(ngModel)]="value">                
+                            <input matInput type="text" [(ngModel)]="sequence[3]" type="number">                
                         </mat-form-field>
                     </div>
                 </div>
 
                 <div fxLayout="row wrap" fxLayoutGap="25px">        
-                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                    <div *ngFor="let aditionalField of aditionalFields; let i = index" class="line__item" fxFlex="calc(25% - 25px)">
                         <mat-form-field appearance="fill">
-                            <mat-label>Primeiro número</mat-label>
-                            <input matInput type="text" [(ngModel)]="value">                
+                            <mat-label>Número adicional</mat-label>
+                            <input matInput type="text" [(ngModel)]="sequence[i]" type="number">                
                         </mat-form-field>
-                    </div>
- 
-                    
+                    </div>                    
                 </div>
             </div>
         </div> 
         
-        <button class="banner__favorite-btn" mat-fab aria-label="Favoritar" color="grey" (click)="toggleFavorite()">
+        <button class="line__add-btn" mat-fab aria-label="Favoritar" color="grey" (click)="addField()">
             <mat-icon color="#EAEAEA"> add</mat-icon>
         </button>
+    </div>
+
+    <div class="line" fxLayout="row" fxLayoutGap="25px">
+        <div class="line__title">
+            Target
+        </div>
+
+        <div fxLayout="row wrap" fxLayoutGap="25px"  fxLayoutAlign="flex-start" class="line__target">  
+            <div fxFlex="calc(100% - 32px)">
+                <div fxLayout="row wrap" fxLayoutGap="25px">        
+                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Target</mat-label>
+                            <input matInput type="text" [(ngModel)]="target" type="number">                
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="card__actions">
+        <button mat-button color="disabled" (click)="clearFields()">LIMPAR CAMPOS</button>
+        <button mat-flat-button color="primary" (click)="combine()">COMBINAR</button>
+    </div>
+</mat-card>
+
+<mat-card class="card" *ngIf="combinations.length">
+    <div class="audaces-h1">
+        Combinações possíveis
+    </div>
+
+    <div class="line" fxLayout="row" fxLayoutGap="25px">
+        <div fxLayout="row wrap" fxLayoutGap="25px"  fxLayoutAlign="flex-start">  
+            <div *ngFor="let combination of combinations; let i = index" class="line__item" fxFlex="calc(25% - 25px)">
+                <div fxLayout="row wrap" fxLayoutGap="25px">        
+                    <div class="line__item" fxFlex="calc(25% - 25px)">
+                        <mat-form-field appearance="fill">
+{{combination}}                            
+                            <input matInput type="text" [(ngModel)]="combinations[i]" type="number">                
+                        </mat-form-field> 
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </mat-card>

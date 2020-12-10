@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { ThemeService } from './core/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'audaces-app';
+  isDarkTheme: Observable<boolean>;
+
+  constructor(private themeService: ThemeService) {
+    this.isDarkTheme = new Observable();
+  }
+
+  ngOnInit() {
+    this.isDarkTheme = this.themeService.isDarkTheme;
+  }
 } 

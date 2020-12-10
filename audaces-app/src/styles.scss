@@ -16,6 +16,13 @@ $audaces-pink: (
   ),
 );
 
+$audaces-pink-dark: (
+  A100: #ff96c7,
+  contrast: (
+    A100: $light-primary-text,
+  ),
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -27,6 +34,7 @@ $audaces-app-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
+// Main Light Theme
 $audaces-app-theme: mat-light-theme(
   (
     color: (
@@ -37,17 +45,60 @@ $audaces-app-theme: mat-light-theme(
   )
 );
 
+// Dark theme
+.dark-theme {
+  color: $light-primary-text;
+  $dark-primary: mat-palette($audaces-pink-dark, A100);
+  $dark-accent: mat-palette($audaces-pink-dark, A100, A100, A100);
+  $dark-warn: mat-palette($mat-red);
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+  $primary: map-get($dark-theme, primary);
+
+  .primary {
+    &--fill {
+      fill: #fff;
+    }
+  }
+
+  .background {
+    background-color: #2f2f2f;
+
+    &--contrast {
+      background-color: #292929;
+    }
+
+    &--form-item {
+      background-color: #292929 !important;
+    }
+  }
+
+  .mat-card {
+    background: #2f2f2f !important;
+  }
+
+  @include angular-material-theme($dark-theme);
+}
+
 @mixin audaces-theme-mixin($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
 
   .primary {
-    &--bg {
-      background-color: mat-color($primary);
-    }
-
     &--fill {
       fill: mat-color($primary);
+    }
+  }
+
+  .background {
+    background-color: #fff;
+
+    &--contrast {
+      background-color: #fff;
+    }
+
+    &--form-item {
+      background-color: #eaeaea;
     }
   }
 }
@@ -70,6 +121,22 @@ body {
 
   * {
     box-sizing: border-box;
+  }
+}
+
+.mat-form-field-flex,
+.mat-fab {
+  @extend .background--form-item;
+}
+
+.mat-fab {
+  height: 51px !important;
+  width: 51px !important;
+  box-shadow: none !important;
+
+  .mat-button-wrapper {
+    padding: 0 !important;
+    margin-top: -1px;
   }
 }
 

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { BannerComponent } from './content/banner/banner.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SequenceTargetComponent } from './content/sequence-target/sequence-target.component';
 
+import { ThemeService } from './core/services/theme.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +25,14 @@ import { SequenceTargetComponent } from './content/sequence-target/sequence-targ
     SequenceTargetComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule 
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

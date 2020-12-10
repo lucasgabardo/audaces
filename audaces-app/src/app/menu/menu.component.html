@@ -1,4 +1,4 @@
-<div class="menu">
+<div class="menu background" >
     <app-logo class="menu__logo" color="primary"></app-logo>
     <div class="menu__title audaces-h1">
         Roboto-Medium 20px
@@ -23,7 +23,7 @@
     </nav> 
 
     <nav class="menu__list--bottom">
-        <button class="menu__list__item text" mat-button>
+        <button class="menu__list__item text" (click)="toggleDarkTheme()" mat-button>
             <mat-icon class="menu__icon">settings_brightness</mat-icon>Trocar de tema
         </button>
         <button class="menu__list__item" mat-button>
