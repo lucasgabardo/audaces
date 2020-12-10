@@ -15,8 +15,6 @@ export class SequenceTargetComponent {
 
   addField(){
     this.aditionalFields.push(null);
-
-    console.log(this.aditionalFields);
   }
 
   clearFields(){
