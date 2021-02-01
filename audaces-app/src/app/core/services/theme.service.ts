@@ -9,4 +9,5 @@ export class ThemeService {
   setDarkTheme(isDarkTheme: boolean): void {  
     this._darkTheme.next(isDarkTheme);
   }
+  console.log(1)
 } 
