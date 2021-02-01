@@ -55,7 +55,7 @@ export class SequenceTargetComponent {
     let result = this.subsetSum(sequenceDesc, parseInt(this.target));
     this.combinations = result ? this.getSumArray(result) : [];
   }
-  // teste 4
+  // teste 5
   getSumArray(result: any[]) {
     let sumArray: any[] = [];
 
